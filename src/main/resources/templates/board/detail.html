@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Board Detail</title></head>
+<body>
+<h1 th:text="${board.title}"></h1>
+<p th:text="${board.content}"></p>
+<p>작성자 : <span th:text="${board.writer}"></span></p>
+<a th:href="@{/boards}">목록으로</a> |
+<a th:href="@{|/boards/${board.id}/delete|}">삭제</a>
+</body>
+</html>
